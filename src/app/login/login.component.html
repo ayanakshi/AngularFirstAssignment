@@ -1,0 +1,17 @@
+<div> 
+    <form (ngSubmit)="login()" #f="ngForm" class="form-style">
+        <div >
+            <div class="form-element">
+                <input required [(ngModel)]="userName" name="userName" id="userName" placeholder="User_Name">
+            </div>
+            <div class="form-element">
+                <input type="password" required [(ngModel)]="password" name="password" id="password" placeholder="Password">
+            </div>
+            <div class="form-element">
+                <button type="submit" [disabled]="!f.valid">Login</button>
+            </div>
+        </div>
+        <div class="form-error">{{errorMessage}}</div>
+    </form>
+    
+</div>

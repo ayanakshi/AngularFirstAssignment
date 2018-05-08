@@ -1,0 +1,36 @@
+<div>
+    <form (ngSubmit)="addEditMember(f)" #f="ngForm" class="form-style">
+        <div class="form-group">
+            <div class="form-element">
+                <input required [(ngModel)]="member.id" name="memberId" id="memberId" placeholder="memberId">
+            </div>
+            <div class="form-element">
+                <input required [(ngModel)]="member.name" name="memberName" id="memberName" placeholder="memberName">
+            </div>
+            <div class="form-element">
+                <input required [(ngModel)]="member.sections.first" name="memberfirstSection" id="memberfirstSection" placeholder="memberfirstSection">
+            </div>
+            <div class="form-element">
+                <input required [(ngModel)]="member.sections.second" name="membersecondSection" id="membersecondSection" placeholder="membersecondSection">
+            </div>
+            <div class="form-element">
+                <input required [(ngModel)]="member.sections.third" name="memberthirdSection" id="memberthirdSection" placeholder="memberthirdSection">
+            </div>
+            <div class="form-element">
+                <input required [(ngModel)]="member.sections.fourth" name="memberfourthSection" id="memberfourthSection" placeholder="memberfourthSection">
+            </div>
+            <div *ngIf= "editRequest" class="form-element">
+                <input required [(ngModel)]="member.joinDate" readonly name="memberJoinDate" id="memberJoinDate" placeholder="memberJoinDate">
+            </div>
+            <!-- TODO: Use select here to provide two options active and inactive-->
+            <div class="form-element">
+                <input required [(ngModel)]="member.status" name="status"  id="status" placeholder="status">
+            </div>
+            <div>
+                <button type="submit" [disabled]="!f.valid" [class.cursor-hand]="f.valid"> {{editRequest?'edit':'add'}}</button>
+                <button *ngIf= "editRequest" required [disabled]="!f.valid" (click)="deleteMember(member)" [class.cursor-hand]="f.valid" > delete</button>
+            </div>
+        </div>
+
+    </form>
+</div>

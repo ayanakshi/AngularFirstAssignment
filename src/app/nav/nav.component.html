@@ -1,0 +1,42 @@
+
+<div class="nav">
+    <div class="float-left">
+        <ul>
+            <li>
+                <span class="admin-style">Admin Section</span>
+            </li>
+            <li routerLinkActive="c-link-active">
+                <a [routerLink]="['members']">
+                    Members
+                </a>
+            </li>
+            <li routerLinkActive="c-link-active">
+                <a [routerLink]="['products']">
+                    Products
+                </a>
+            </li>
+            <li routerLinkActive="c-link-active">
+                <a [routerLink]="['reporting']">
+                    Reporting
+                </a>
+            </li>
+            <li routerLinkActive="c-link-active">
+                <a [routerLink]="['users']">
+                    Users
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="float-right">
+        <ul>
+            <li>
+                <span>{{currentUserName}}</span>
+            </li>
+            <li>
+                <a (click)="logout()" class="cursor-hand">
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

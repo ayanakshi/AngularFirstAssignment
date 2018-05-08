@@ -1,0 +1,77 @@
+<div style="margin: 10px">
+    <div style="font-size:25px">Member List</div>
+    <mat-form-field>
+        <input matInput type="text" [(ngModel)]="searchText">
+        <button (click)="onSearchTextChange()"class="cursor-hand">Filter</button>
+    </mat-form-field>
+    <span style="float:right">
+        <button (click)="addNewMember()" class="cursor-hand new-member"> Create a New Member </button>
+    </span>
+    <mat-table [dataSource]="dataSource" style="border: 1px solid; clear: both;">
+        <!-- ID Column -->
+        <ng-container matColumnDef="ID">
+            <mat-header-cell *matHeaderCellDef class="text-color-blue"> ID </mat-header-cell>
+            <mat-cell *matCellDef="let member" class="text-color-blue"> {{member.id}} </mat-cell>
+        </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="Name">
+            <mat-header-cell *matHeaderCellDef class="text-color-blue" > Name </mat-header-cell>
+            <mat-cell *matCellDef="let member"> {{member.name}} </mat-cell>
+        </ng-container>
+        <!-- Sections Column -->
+        <ng-container matColumnDef="1st">
+            <mat-header-cell *matHeaderCellDef > 1st </mat-header-cell>
+            <mat-cell *matCellDef="let member"> {{member.sections.first}}
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="2nd">
+            <mat-header-cell *matHeaderCellDef > 2nd </mat-header-cell>
+            <mat-cell *matCellDef="let member"> {{member.sections.second}}
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="3rd">
+            <mat-header-cell *matHeaderCellDef > 3rd </mat-header-cell>
+            <mat-cell *matCellDef="let member"> {{member.sections.third}}
+            </mat-cell>
+        </ng-container>
+        <!-- JoinDate Column -->
+        <ng-container matColumnDef="Join Date">
+            <mat-header-cell *matHeaderCellDef class="text-color-blue"> Join Date </mat-header-cell>
+            <mat-cell *matCellDef="let member"> {{member.joinDate}} </mat-cell>
+        </ng-container>
+        <!-- Status Column -->
+        <ng-container matColumnDef="Status">
+            <mat-header-cell *matHeaderCellDef class="text-color-blue"> Status </mat-header-cell>
+            <mat-cell *matCellDef="let member"> {{member.status}} </mat-cell>
+        </ng-container>
+        <!-- Update Column -->
+        <ng-container matColumnDef="Update">
+            <mat-header-cell *matHeaderCellDef > Update </mat-header-cell>
+            <mat-cell *matCellDef="let member" (click)="memberUpdate(member.id)" class="cursor-hand text-color-blue"> Edit/Delete </mat-cell>
+        </ng-container>
+
+        <!-- TODO: inline style to move in css file-->
+        <ng-container *matHeaderRowDef="displayedColumns">
+            <div class="mat-header-row header-group-row">
+                <div class="mat-header-cell" style="border-right: 1px solid;
+          min-height: 56px" role="columnheader"></div>
+                <div class="mat-header-cell" role="columnheader" style="border-right: 1px solid;
+          min-height: 56px"></div>
+                <div class="mat-header-cell header-group" role="columnheader" style="flex: 3;   border-bottom:1px solid; border-right: 1px solid;
+          padding-top: 18px;     padding-bottom: 20px;
+          padding-right: 2px;padding-left: 1px; text-align: center">Sections</div>
+                <div class="mat-header-cell" style="border-right: 1px solid;
+          min-height: 56px" role="columnheader"></div>
+                <div class="mat-header-cell" style="border-right: 1px solid;
+          min-height: 56px" role="columnheader"></div>
+                <div class="mat-header-cell" role="columnheader"></div>
+            </div>
+            <mat-header-row></mat-header-row>
+        </ng-container>
+
+        <mat-row *matRowDef="let row; columns: displayedColumns;">
+        </mat-row>
+    </mat-table>
+    <!-- For pagination -->
+    <mat-paginator #paginator [pageSize]="2"></mat-paginator>
+</div>

@@ -1,0 +1,40 @@
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+}
+.nav {
+    background-color: #181818;
+}
+.nav:after { 
+    content: " "; 
+    display: block;
+    clear: both;
+} 
+
+li a {
+    text-decoration: none;
+}
+li span, li a {
+    text-align: center;
+    padding: 14px 16px;
+    color: #999999;
+    display: block;
+}
+
+li {
+     float: left;
+}
+.admin-style {
+    font-size: 20px;
+}
+.c-link-active > a {
+    color: white;
+    background-color: black;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right
+}

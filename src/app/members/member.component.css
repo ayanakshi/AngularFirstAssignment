@@ -1,0 +1,87 @@
+
+    .mat-table {
+        overflow: auto;
+        max-height: 500px;
+    }
+
+    .mat-column-Name {
+        border-right: 1px solid grey;
+        align-self: stretch;
+        text-align: center
+    }
+
+    .mat-column-ID {
+        border-right: 1px solid grey;
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .mat-column-1st {
+        border-right: 1px solid grey;
+        align-self: stretch;
+        text-align: center;
+    } 
+
+    .mat-column-2nd {
+        border-right: 1px solid grey;
+        align-self: stretch;
+        text-align: center;
+    } 
+    .mat-column-3rd {
+        border-right: 1px solid grey;
+        align-self: stretch;
+        text-align: center;
+    } 
+    .mat-column-Join-Date {
+        border-right: 1px solid grey;
+        align-self: stretch;
+        text-align: center;
+    } 
+    .mat-column-Status {
+        border-right: 1px solid grey;
+        align-self: stretch;
+        text-align: center;
+    } 
+
+    .mat-column-Update {
+        text-align: center;
+        align-self: stretch;
+    }
+
+    .mat-header-row {
+        padding: 0px;
+    }
+
+    .mat-row {
+        padding: 0px;
+    }
+
+    .header-group-row {
+        border-bottom: none;
+    }
+
+    .mat-input-element {
+        border: 1px solid #ECECEC;
+        width: 200px;
+        padding: 5px 0px;
+        border-radius: 3px;
+    }
+
+     button {
+        width: 70px;
+        background-color: black;
+        color: white;
+        border-radius: 3px;
+        padding: 5px;
+    }
+    .new-member {
+        width: 150px;
+        background-color: #499445
+    }
+    :host /deep/ .mat-form-field-infix {
+        width: 350px;
+        margin-bottom: 15px;
+    }
+    .text-color-blue {
+        color: #0085D5;
+    }
