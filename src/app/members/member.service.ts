@@ -18,6 +18,7 @@ export class MemberService {
 
         /**
          * This method is used to return member list from json file
+         * Not in use right now
          */
         public getMembers(): Observable<any> {
                 return this.http.get('~/../assets/mockJsonResponse/memberList.json');

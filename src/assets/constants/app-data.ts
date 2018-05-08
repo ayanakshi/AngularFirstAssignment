@@ -3,7 +3,7 @@ export class AppData {
 
     public static memberListData = [{
         'id': '1',
-        'name': 'abc',
+        'name': 'abc1',
         'joinDate': '5/4/2018, 11:43:01 AM',
         'status': 'Active',
         'sections' : {
@@ -14,7 +14,7 @@ export class AppData {
         }
     },
     {
-        'id': 'second',
+        'id': '2',
         'name': 'abc2',
         'joinDate': '5/3/2018, 11:43:01 AM',
         'status': 'Active',

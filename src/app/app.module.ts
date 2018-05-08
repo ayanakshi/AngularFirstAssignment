@@ -15,6 +15,7 @@ import { NavComponent } from './nav/nav.component';
 import { MemberComponent } from './members/member.component';
 import { MemberService } from './members/member.service';
 import { ProductComponent } from './products/product.component';
+import { ProductService } from './products/product.service';
 import { ReportingComponent } from './reporting/reporting.component';
 import { UserComponent } from './user/user.component';
 import { AddEditMemberComponent } from './members/add-edit-member.component';
@@ -43,7 +44,7 @@ import { AuthGuard } from './shared/auth.guard';
     MatFormFieldModule,
     MatInputModule 
   ],
-  providers: [LoginService, MemberService, AuthGuard],
+  providers: [LoginService, MemberService, AuthGuard, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
